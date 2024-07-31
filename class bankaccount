@@ -1,0 +1,49 @@
+class BankAccount {
+    private String accountHolderName;
+    private double balance;
+    public BankAccount(String accountHolderName, double initialBalance) {
+        this.accountHolderName = accountHolderName;
+        this.balance = initialBalance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount");
+        }
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrew: " + amount);
+        } else {
+            System.out.println("Invalid withdrawal amount or insufficient funds");
+        }
+    }
+    public double getBalance() {
+        return balance;
+    }
+
+    // Method to display the account details
+    public void displayAccountDetails() {
+        System.out.println("Account Holder: " + accountHolderName);
+        System.out.println("Balance: " + balance);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+      
+        BankAccount account = new BankAccount("Alice", 1000);
+
+        account.displayAccountDetails();
+
+        account.deposit(500);
+
+        account.withdraw(200);
+
+        System.out.println("Current Balance: " + account.getBalance());
+
+        account.displayAccountDetails();
+    }
+}
