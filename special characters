@@ -1,0 +1,12 @@
+public class SpecialCharacters {
+    public static void main(String[] args) {
+        System.out.println("Special Characters: ");
+        System.out.println("Backspace: \b");
+        System.out.println("Tab: \t");
+        System.out.println("New Line: \n");
+        System.out.println("Carriage Return: \r");
+        System.out.println("Double Quote: \"");
+        System.out.println("Single Quote: \'");
+        System.out.println("Backslash: \\");
+    }
+}
