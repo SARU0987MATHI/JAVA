@@ -1,0 +1,49 @@
+public class CompositeNumbers {
+    public static void main(String[] args) {
+        int n = 10;
+        for (int i = 4; i <= n; i++) {
+            boolean isComposite = false;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isComposite = true;
+                    break;
+                }
+            }
+            if (isComposite) {
+                System.out.println(i + " is a composite number.");
+            }
+        }
+    }
+}
+```# Generating Composite Numbers in JAVA
+
+```java
+public class CompositeNumbers {
+    public static void main(String[] args) {
+        int n = 10; // Number of composite numbers to generate
+        int count = 0;
+        int num = 4; // Starting from 4 as 1, 2, and 3 are not composite numbers
+
+        System.out.println("First " + n + " composite numbers are:");
+
+        while (count < n) {
+            if (isComposite(num)) {
+                System.out.print(num + " ");
+                count++;
+            }
+            num++;
+        }
+    }
+
+    public static boolean isComposite(int num) {
+        if (num < 4) {
+            return false;
+        }
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
