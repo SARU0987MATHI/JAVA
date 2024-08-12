@@ -1,0 +1,18 @@
+
+
+import java.util.HashMap;
+
+public class FrequencyCounter {
+    public static void main(String[] args) {
+        int[] input = {1, 2, 8, 3, 2, 2, 2, 5, 1};
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+
+        for (int num : input) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        for (HashMap.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            System.out.println("Element: " + entry.getKey() + ", Frequency: " + entry.getValue());
+        }
+    }
+}
