@@ -1,0 +1,19 @@
+public class ConsonantsAndVowels {
+    public static void main(String[] args) {
+        String input = "engineering";
+        String vowels = "aeiouAEIOU";
+        StringBuilder consonants = new StringBuilder();
+        StringBuilder vowelList = new StringBuilder();
+
+        for (char ch : input.toCharArray()) {
+            if (vowels.indexOf(ch) != -1) {
+                vowelList.append(ch).append(" ");
+            } else {
+                consonants.append(ch).append(" ");
+            }
+        }
+
+        System.out.println("Vowels: " + vowelList.toString().trim());
+        System.out.println("Consonants: " + consonants.toString().trim());
+    }
+}
